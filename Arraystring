@@ -1,0 +1,20 @@
+import java.io.*;
+
+class arraystring{
+    public static void main(String args[] ) throws Exception {
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        int arr[] = new int[n];
+        String line = br.readLine();
+        for(int i=0;i<n;i++){
+            arr[i] = Integer.parseInt(line.split(" ")[i]);
+        }
+        double ans = 1;
+        for(int i=0;i<n;i++){
+            ans = ( ans * arr[i] ) % ((Math.pow(10,9)) + 7);
+        }
+        System.out.println((int)ans);
+		
+	}
+}
