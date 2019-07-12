@@ -1,0 +1,67 @@
+import java.io.*;
+class seat {
+    public static void main(String args[] ) throws Exception {
+        
+        
+		int n,s,p;
+	
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter the number of test cases");
+		n=Integer.parseInt(br.readLine());
+		System.out.println("Enter the seat numbers");
+		while(n>0)
+		{	
+			s=Integer.parseInt(br.readLine());
+			if(s>=1 && s<=108)
+			{
+    			p=s%12;
+    			switch(p)
+    			{
+    		
+                    case 0 : s-=11;  
+                              System.out.println (s+" WS");  
+                               break;  
+                    case 1 : s+=11;  
+                               System.out.println(s+" WS");  
+                               break;  
+                    case 2 : s+=9;  
+                               System.out.println(s+" MS");  
+                               break;  
+                    case 3 : s+=7;  
+                               System.out.println(s+" AS");  
+                               break;  
+                    case 4 : s+=5;  
+                               System.out.println(s+" AS");  
+                               break;  
+                    case 5 : s+=3;  
+                               System.out.println(s+" MS");  
+                               break;  
+                 case 6 : s+=1;  
+                               System.out.println(s+" WS");  
+                               break;  
+                    case 7 : s-=1;  
+                               System.out.println(s+" WS");  
+                               break;  
+                    case 8 : s-=3;  
+                               System.out.println(s+" MS");  
+                               break;  
+                    case 9 : s-=5;  
+                               System.out.println(s+" AS");  
+                               break;  
+                 case 10 : s-=7;  
+                               System.out.println(s+" AS");  
+                               break;  
+                 case 11 : s-=9;  
+                               System.out.println(s+" MS");  
+                               break; 
+    				default: System.out.println("Invalid");
+               } 
+			}
+			
+    		   n--;
+      }  
+	
+        
+        
+    }
+}
